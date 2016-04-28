@@ -12,6 +12,7 @@ body {
    margin:0;
    padding:0;
    height:100%;
+
 }
 #wrap {
 	min-height:100%;
@@ -27,14 +28,15 @@ body {
    padding:10px;
    padding-bottom:43px;   /* Height of the footer */
 }
-#col-left {
-	line-height:30px;
-    background-color:#eeeeee;
-    height:100px;
-    width:500px;
-    float:left;
-    padding:25px;
-    padding-left:350px;
+.box {
+  height: 300px;
+  width: 500px;
+  background-color:#eeeeee;
+  position: absolute;
+  
+  /*Centering Method 2*/
+  margin: 0px 0 0 -400px;
+  left: 50%;
 }
 #footer {
     background-color:black;
@@ -49,8 +51,6 @@ body {
 }
 .nav {
     height:25px;
-
-          
 }
 .nav ul {
 	margin:0;
@@ -64,15 +64,32 @@ body {
 	text-decoration: none;
 	float:left;
 	display:block;
-	padding:5px 40px;
+	padding:5px 43px;
 	color:white;
 	border-style:ridge;
     border-color:#330066;
     border-width:.25px;
-
+    border-bottom-style:none;
 }
 .nav ul li a:hover {
 	background-color:#330066;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 .clearfooter {
 height: 550px;
@@ -92,14 +109,20 @@ clear: both;
 					<li><a href="#">Rates</a></li>
 					<li><a href="#">Calendar</a></li>
 					<li><a href="#">Contact Us</a></li>
+				<div class="dropdown">
+				    <li><a href="#" style="padding-left:300px">
+						<img src="share.png" alt="oops" style="width:50px;height:20px;"></a></li>
+				</div>
 				</ul>
-			</div>
+		    </div>
+				
 		</div>
+
 		
 			
 
 		<div id="body">
-			<div id="col-left">
+			<div class="box">
 			<h1>Content goes here</h1>
 			<p>Content.</p>
 			</div>
@@ -108,7 +131,7 @@ clear: both;
 <div class="clearfooter"></div>
 
 		<div id="footer">
-  			<img src="3.png" alt="oops" width="450" height="42" align="center">
+  			<img src="footer_image.png" alt="oops" width="450" height="42" align="center">
   		Copyright © Barrossales.com
 		</div>
 	</div>
